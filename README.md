@@ -2,7 +2,7 @@
 
 ## Correr la app
 
-La aplicacion usa node `v8.9.0` (la version LTE). Para iniciarla: `npm start`
+La aplicacion usa node `v8.9.3` (la version LTE). Para iniciarla: `npm start`
 
 ## Crear base de datos
 
