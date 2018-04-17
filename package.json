@@ -24,7 +24,8 @@
     "nodemon": "^1.17.3",
     "pg": "^7.4.1",
     "pg-format": "^1.0.4",
-    "themeparks": "^4.6.13"
+    "themeparks": "^4.6.13",
+    "json2csv": "latest"
   },
   "devDependencies": {
     "request": "^2.81.0",

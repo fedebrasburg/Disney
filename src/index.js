@@ -21,12 +21,12 @@ app.listen(app.get('port'), () => {
   console.log(`Node app is running on port ${PORT}`)
 })
 
-// function callNTimes(time, fn) {
-//   function callFn() {
-//     fn();
-//     setTimeout(callFn, time);
-//   }
-//   setTimeout(callFn, time);
-// }
+function callNTimes(time, fn) {
+  function callFn() {
+    fn();
+    setTimeout(callFn, time);
+  }
+  setTimeout(callFn, time);
+}
 
-// callNTimes(5000, function() { return ParkService().getDataFromPark() });
+callNTimes(60000, function() { return ParkService().getDataFromPark() });

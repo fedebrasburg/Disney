@@ -1,5 +1,6 @@
 import ThemeParks from 'themeparks'
 import parksGateway from '../Gateways/parksGateway'
+import Json2csvParser from 'json2csv';
 
 export default function ParksService()  {
   const park = new ThemeParks.Parks.WaltDisneyWorldMagicKingdom();
@@ -15,7 +16,9 @@ export default function ParksService()  {
 
   return {
     getData :() => {
-      return parksGateway().getTimes();
+      const parser = new Json2csvParser.Parser();
+      return parksGateway().getTimes()
+        .then(times => parser.parse(times));
     },
     getDataFromPark
   }
