@@ -12,6 +12,7 @@ export default function ParksGateway()  {
         promises.push(client.query(query));
       })
       return Promise.all(promises)
+        .then(() => client.release());
     });
   }
 
