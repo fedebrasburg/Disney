@@ -8,7 +8,7 @@ export default function ParksGateway()  {
       const promises = [];
       rides.forEach(ride => {
         const query = format(`INSERT INTO times (name, waittime, status, active, lastupdate, gameid, tookedtime)
-                              VALUES ('${ride.name}', ${ride.waitTime}, '${ride.status}', ${ride.active}, '${ride.lastUpdate}', '${ride.id}', '${new Date().toUTCString()}')`);
+                              VALUES ('${ride.name}', ${ride.waitTime}, '${ride.status}', ${ride.active}, '${ride.lastUpdate}', '${ride.id}', '${new Date().toLocaleString()}')`);
         promises.push(client.query(query));
       })
       return Promise.all(promises)
